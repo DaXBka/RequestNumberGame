@@ -11,8 +11,10 @@ const isNumber = function (num) {
     return !isNaN(parseFloat(num)) && isFinite(num);
 };
 
-function game(requestNumber) {
+function game() {
     alert("Угадай число от 1 до 100");
+    let requestNumber = Math.floor(Math.random() * 100 + 1);
+    console.log(requestNumber);
 
     const gameQuestion = function () {
         let userNumber = prompt("Введи число в поле");
