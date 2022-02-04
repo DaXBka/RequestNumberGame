@@ -1,7 +1,5 @@
 "use strict";
 
-let requestNumberForGame = 10; // Число для игры
-
 const isNumber = function (num) {
     return !isNaN(parseFloat(num)) && isFinite(num); // Проверка числа, число ли оно?
 };
@@ -10,7 +8,7 @@ game(); // Старт игры (function declaration)
 
 function game() {
     alert("Угадай число от 1 до 100");
-    const requestNumber = Math.floor(Math.random() * 100 + 1);
+    const requestNumber = Math.floor(Math.random() * 100 + 1); // Число выбирается рандомно и в замыкание
     let attempts = 10; // Кол-во попыток в замыкании
 
     const gameQuestion = function () {
