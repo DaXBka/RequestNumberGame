@@ -6,10 +6,11 @@ const isNumber = function (num) {
     return !isNaN(parseFloat(num)) && isFinite(num); // Проверка числа, число ли оно?
 };
 
-game(requestNumberForGame); // Старт игры (function declaration)
+game(); // Старт игры (function declaration)
 
-function game(requestNumber) {
+function game() {
     alert("Угадай число от 1 до 100");
+    const requestNumber = Math.floor(Math.random() * 100 + 1);
     let attempts = 10; // Кол-во попыток в замыкании
 
     const gameQuestion = function () {
@@ -31,7 +32,7 @@ function game(requestNumber) {
                     gameQuestion();
 
                 } else if (userNumber == requestNumber) {
-                    if (confirm("Поздравляю, ты угадал! Хотите сыграть ещё?")) game(requestNumberForGame);
+                    if (confirm("Поздравляю, ты угадал! Хотите сыграть ещё?")) game();
                     else alert("Игра окончена. Спасибо!");
                     // Положительный ответ полностью перезапускает игру.
                     // Новое число можно определять через Math.random и сохранять,
@@ -47,7 +48,7 @@ function game(requestNumber) {
             }
 
         } else {
-            if (confirm("Ваши попытки закончились. Хотите сыграть ещё?")) game(requestNumberForGame);
+            if (confirm("Ваши попытки закончились. Хотите сыграть ещё?")) game();
             else alert("Игра окончена. Спасибо!");
         }
     };
