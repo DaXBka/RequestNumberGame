@@ -1,5 +1,9 @@
 "use strict";
 
+// Я вынес усложненное задание в отдельную ветку,
+// может быть, так удобнее будет?
+// Вторая ссылка на отдельную ветку.
+
 const isNumber = function (num) {
     return !isNaN(parseFloat(num)) && isFinite(num);
 };
