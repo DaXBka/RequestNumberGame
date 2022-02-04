@@ -33,4 +33,4 @@ function game() {
     gameQuestion();
 }
 
-game(10);
+game();
